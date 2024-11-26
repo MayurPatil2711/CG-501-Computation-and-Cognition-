@@ -106,7 +106,6 @@ class CognitiveSuite:
         task.is_correct = response == task.correct_response
 
     def save_data(self) -> None:
-        """Save trial data to JSON and CSV formats."""
         if not self.participant_id:
             raise ValueError("Participant ID not set")
 
@@ -141,7 +140,7 @@ class CognitiveSuite:
             df.to_csv(csv_path, index=False)
 
 
-def run_n_back_task(participant_id: str, ntasks_per_type: int = 20):
+def run_n_back_task(participant_id: str, ntasks_per_type: int = 50):
     """Run only the N-back task."""
     suite = CognitiveSuite()
     suite.participant_id = participant_id

@@ -125,7 +125,7 @@ class StroopGame:
         df = pd.DataFrame(trial_data)
         df.to_csv(csv_path, index=False)
 
-    def run(self, num_trials=10):
+    def run(self, num_trials=40):
         """Run the Stroop game."""
         self.display_instructions()
 
@@ -141,8 +141,8 @@ class StroopGame:
 
 if __name__ == "__main__":
     # Set participant ID
-    participant_id = input("Enter participant ID: ")
+    participant_id = input("Enter participant ID:")
 
     # Create and run the game
     game = StroopGame(participant_id)
-    game.run(num_trials=15)
+    game.run(num_trials=40)
